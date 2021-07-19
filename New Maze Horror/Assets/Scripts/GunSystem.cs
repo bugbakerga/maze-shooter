@@ -25,6 +25,10 @@ public class GunSystem : MonoBehaviour
     public GameObject shotFlash, bulletHole;
     public TextMeshProUGUI bulletui;
 
+    //SFX
+    public AudioSource speaker;
+    public AudioClip[] clips;
+
     private void Awake()
     {
         bulletsLeft = magazineSize;
@@ -92,6 +96,7 @@ public class GunSystem : MonoBehaviour
     private void Reload()
     {
         reloading = true;
+        speaker.PlayOneShot(clips[0]);
         Invoke("ReloadFinished", reloadTime);
     }
 
