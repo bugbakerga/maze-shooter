@@ -74,6 +74,9 @@ public class GunSystem : MonoBehaviour
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayhit, range, whatIsEnemy))
         {
             Debug.Log(rayhit.collider.name);
+
+            if (rayhit.collider.CompareTag("Enemy"))
+                rayhit.collider.GetComponent<EnemyHealth>().TakeDamage(25);
         }
 
         Instantiate(bulletHole, rayhit.point, Quaternion.Euler(0, 180, 0));

@@ -407,6 +407,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &208298861 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2335377290212316796, guid: 53c4af9f782635244b9d69542a4a7253,
+    type: 3}
+  m_PrefabInstance: {fileID: 2335377291478282407}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386cce1cfcc4d644bb4d7ee3994d6def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &245196402 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8526084048989080954, guid: a47105455478e4f47ab297094eacd504,
@@ -770,7 +782,7 @@ MonoBehaviour:
   attackPoint: {fileID: 812507192}
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 2048
   shotFlash: {fileID: 659659763939366583, guid: 35818bb4379167242ab4ee3eaffa62f5,
     type: 3}
   bulletHole: {fileID: 9034776316518531366, guid: a93a49492fe411345b6d2d400f779488,
@@ -2843,5 +2855,15 @@ PrefabInstance:
       propertyPath: Target
       value: 
       objectReference: {fileID: 1874474252}
+    - target: {fileID: 4297181897995948358, guid: 53c4af9f782635244b9d69542a4a7253,
+        type: 3}
+      propertyPath: newlookrad
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297181897995948358, guid: 53c4af9f782635244b9d69542a4a7253,
+        type: 3}
+      propertyPath: theai
+      value: 
+      objectReference: {fileID: 208298861}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53c4af9f782635244b9d69542a4a7253, type: 3}
