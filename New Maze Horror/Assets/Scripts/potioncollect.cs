@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinCollect : MonoBehaviour
+public class potioncollect : MonoBehaviour
 {
-    public CoinSystem coinSystem;
+    public potionlogic potioncont;
 
     void OnTriggerEnter(Collider plyr)
     {
         if (plyr.gameObject.tag == "Player")
         {
-            coinSystem.addCoin();
-            Destroy(gameObject);
+            potioncont.potionEffects();
         }
     }
 }

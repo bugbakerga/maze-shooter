@@ -9,6 +9,9 @@ public class CoinSystem : MonoBehaviour
     public int coinscollected;
     public int totalCoins;
 
+    public AudioSource speaker;
+    public AudioClip sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +22,6 @@ public class CoinSystem : MonoBehaviour
     {
         coinscollected += 1;
         coinUi.text = ":" + coinscollected + "/" + totalCoins;
+        speaker.PlayOneShot(sound);
     }
 }
