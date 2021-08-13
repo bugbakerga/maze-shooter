@@ -8,9 +8,12 @@ public class Enemycontroller : MonoBehaviour
     public Transform[] waypoints;
 
     public float lookRadius = 10f;
+    public float attackRadius = 5f;
 
     private int waypointIndex;
     private float dist;
+
+    public Animator anim;
 
     Transform target;
     NavMeshAgent agent;
@@ -29,9 +32,16 @@ public class Enemycontroller : MonoBehaviour
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
-        if (distance <= lookRadius)
+        if (distance <= lookRadius && distance > attackRadius)
         {
+            agent.isStopped = false;
             agent.SetDestination(target.position);
+        }
+
+        if (distance < attackRadius)
+        {
+            agent.isStopped = true;
+            anim.SetTrigger("attack");
         }
 
         dist = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
@@ -62,6 +72,7 @@ public class Enemycontroller : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
 
     public void Speedup()

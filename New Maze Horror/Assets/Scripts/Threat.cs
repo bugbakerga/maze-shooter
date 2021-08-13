@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Threat : MonoBehaviour
 {
+    public float damage;
+
     void OnTriggerEnter(Collider plyr)
     {
         if (plyr.gameObject.tag == "Player")
         {
-            plyr.gameObject.GetComponent<MainHealth>().TakePlayerDamage();
+            plyr.gameObject.GetComponent<MainHealth>().TakePlayerDamage(damage);
         }
     }
 }
