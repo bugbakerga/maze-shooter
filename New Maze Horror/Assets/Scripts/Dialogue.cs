@@ -27,6 +27,8 @@ public class Dialogue : MonoBehaviour
         StartCoroutine(Type());
         continuebutton.SetActive(false);
         boxanim.SetBool("isOpen", true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     
     void Update()
@@ -61,6 +63,8 @@ public class Dialogue : MonoBehaviour
             continuebutton.SetActive(false);
             boxanim.SetBool("isOpen", false);
             fpscam.SetActive(true);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             dialoguelogic.SetActive(false);
         }
     }

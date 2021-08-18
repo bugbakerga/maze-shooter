@@ -8,9 +8,11 @@ public class EnemyHealth : MonoBehaviour
     public int currentHealth;
 
     public float newlookrad;
+    public bool partofmission;
 
     public GameObject explosion;
     public Enemycontroller theai;
+    public enemyWaveManager enemyWave;
 
     void Start()
     {
@@ -23,6 +25,10 @@ public class EnemyHealth : MonoBehaviour
         theai.lookRadius = newlookrad;
         if (currentHealth < 1)
         {
+            if(partofmission == true)
+            {
+                enemyWave.ghostKill();
+            }
             Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
