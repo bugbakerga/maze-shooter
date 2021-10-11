@@ -13,6 +13,7 @@ public class cutscenetrigger : MonoBehaviour
     {
         if (plyr.gameObject.tag == "Player")
         {
+            gameObject.GetComponent<BoxCollider>().enabled = false;
             cutscene.Play();
             thePlayer.SetActive(false);
             lucky.SetActive(false);

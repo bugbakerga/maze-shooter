@@ -7889,7 +7889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d360d2f2c8c624b82c9f063ddeb79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hits: 1
+  hits: 10
   cameraShake: {fileID: 591284201}
   blood: {fileID: 311972002}
   audioSource: {fileID: 330253942}

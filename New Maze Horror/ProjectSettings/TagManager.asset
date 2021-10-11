@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Enemytwo
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - minimap
   - postp
   - enemy
-  - 
+  - enemy2
   - 
   - 
   - 

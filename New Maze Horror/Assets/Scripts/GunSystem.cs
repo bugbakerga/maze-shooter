@@ -77,7 +77,11 @@ public class GunSystem : MonoBehaviour
 
             if (rayhit.collider.CompareTag("Enemy"))
                 rayhit.collider.GetComponent<EnemyHealth>().TakeDamage(25);
+
+            if (rayhit.collider.CompareTag("Enemytwo"))
+                rayhit.collider.GetComponent<Enemy2Health>().TakeDamage(20);
         }
+
 
         Instantiate(bulletHole, rayhit.point, Quaternion.Euler(0, 180, 0));
         Instantiate(shotFlash, attackPoint.position, Quaternion.identity);
