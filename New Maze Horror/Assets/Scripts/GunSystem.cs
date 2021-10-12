@@ -80,6 +80,9 @@ public class GunSystem : MonoBehaviour
 
             if (rayhit.collider.CompareTag("Enemytwo"))
                 rayhit.collider.GetComponent<Enemy2Health>().TakeDamage(20);
+
+            if (rayhit.collider.CompareTag("Mickeytag"))
+                rayhit.collider.GetComponent<MickeyBoss>().mickeyhit();
         }
 
 
